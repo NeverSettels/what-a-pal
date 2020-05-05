@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
-
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 public class Palindrome
 {
   public static bool IsAPal(string input)
@@ -9,7 +11,12 @@ public class Palindrome
     List<char> letters = new List<char> { };
     foreach (char letter in input)
     {
-      letters.Add(letter);
+      if ((int)letter >= 97 && (int)letter <= 122)
+      {
+        //Console.WriteLine(letter);
+        letters.Add(letter);
+      }
+
     }
     for (int i = 0; i < letters.Count; i++)
     {
